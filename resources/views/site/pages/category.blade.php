@@ -14,7 +14,8 @@
                     <div class="col-md-3">
                         <figure class="card card-product">
                             @if ($seedling->images->count() > 0)
-                                <div class="img-wrap padding-y"><img src="{{ asset('storage/'.$seedling->images->first()->full) }}" alt=""></div>
+                            {{-- <div>{{  var_dump( asset($seedling->images->first()->full)) }}</div> --}}
+                                <div class="img-wrap padding-y"><img src="{{ asset($seedling->images->first()->full) }}" alt=""></div>
                             @else
                                 <div class="img-wrap padding-y"><img src="https://via.placeholder.com/176" alt=""></div>
                             @endif
@@ -45,7 +46,7 @@
                                         @endif
                                     </div>
                                 </div>
-                                
+
                                 <br>
                                 <a href="{{ route('seedling.show', $seedling->slug) }}" class="btn btn-sm btn-success float-right"><i class="fas fa-eye"></i>&nbsp;&nbsp; View Detail</a>
                             </div>
