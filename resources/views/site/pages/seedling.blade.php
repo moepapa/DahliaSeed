@@ -36,8 +36,8 @@
                                     @if ($seedling->images->count() > 0)
                                         <div class="img-big-wrap">
                                             <div class="padding-y">
-                                                <a href="{{ asset('storage/'.$seedling->images->first()->full) }}" data-fancybox="">
-                                                    <img src="{{ asset('storage/'.$seedling->images->first()->full) }}" alt="">
+                                                <a href="{{ asset($seedling->images->first()->full) }}" data-fancybox="">
+                                                    <img src="{{ asset($seedling->images->first()->full) }}" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -52,7 +52,7 @@
                                         <div class="img-small-wrap">
                                             @foreach($seedling->images as $image)
                                                 <div class="item-gallery">
-                                                    <img src="{{ asset('storage/'.$image->full) }}" alt="" height="200" width="150">
+                                                    <img src="{{ asset($image->full) }}" alt="" height="200" width="150">
                                                 </div>
                                             @endforeach
                                         </div>
