@@ -56,7 +56,7 @@
                                                     <div class="row">
                                                         @foreach($item->seedling->images as $image)
                                                             <div class="col-md-4">
-                                                                <img src="{{ asset('storage/'.$image->full) }}" id="brandLogo" class="img-fluid" alt="img" width="65px" heigh="70px">
+                                                                <img src="{{ asset($image->full) }}" id="brandLogo" class="img-fluid" alt="img" width="65px" heigh="70px">
                                                             </div>
                                                         @endforeach
                                                     </div>
